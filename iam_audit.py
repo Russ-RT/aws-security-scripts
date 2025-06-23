@@ -36,4 +36,4 @@ with open('iam_audit.csv', 'w', newline='') as csvfile:
     for row in report:
         writer.writerow(row)
 
-print(f"Done. Scanned {len(report)} users and wrote iam_audit.csv")
+print(f"Done. Scanned {len(report)} users and wrote inside iam_audit.csv")
