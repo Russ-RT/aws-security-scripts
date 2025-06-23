@@ -1,28 +1,36 @@
-# AWS Security Scripts
+# AWS Security Script
 
-This repo contains two Python scripts using boto3:
-- **iam_audit.py**: scans all IAM users for missing MFA, stale access keys, and AdministratorAccess attachments, outputting a CSV.
-- **cloudtrail_parser.py**: downloads and parses CloudTrail logs to flag root login attempts, policy changes, and unauthorized API calls, then exports a CSV report.
+A Python script using boto3:
+
+- **iam_audit.py**  
+  Loops through all IAM users, checks their MFA status, measures how old their access keys are, and flags anyone with AdministratorAccess policy. Outputs this inside `iam_audit.csv`.
 
 ## Setup
-1. Create and activate a venv  
-   ```bash
-   python -m venv venv
-   source venv/Scripts/activate   # Git Bash on Windows
-   ```
-2. Install dependencies  
-   ```bash
-   pip install boto3 awscli
-   ```
-3. Export AWS creds  
-   ```bash
-   export AWS_ACCESS_KEY_ID=…
-   export AWS_SECRET_ACCESS_KEY=…
-   export AWS_DEFAULT_REGION=us-east-1
-   ```
-4. Run the scripts  
-   ```bash
-   python iam_audit.py
-   python cloudtrail_parser.py
-   ```
 
+1. Create & activate a venv  
+   
+    ```bash
+    python -m venv venv
+    source venv/Scripts/activate  s  # Git Bash on Windows
+    ```
+
+2. Install boto3 & AWS CLI  
+   
+    ```bash
+    pip install --upgrade pip
+    pip install boto3 awscli
+    ```
+
+3. Export your AWS credentials  
+   
+    ```bash
+    export AWS_ACCESS_KEY_ID=...
+    export AWS_SECRET_ACCESS_KEY=...
+    export AWS_DEFAULT_REGION=...
+    ```
+
+4. Run the IAM audit  
+   
+    ```bash
+    python iam_audit.py
+    ```
