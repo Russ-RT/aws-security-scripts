@@ -11,7 +11,7 @@ A Python script using boto3:
    
     ```bash
     python -m venv venv
-    source venv/Scripts/activate  s  # Git Bash on Windows
+    source venv/Scripts/activate # Git Bash on Windows
     ```
 
 2. Install boto3 & AWS CLI  
