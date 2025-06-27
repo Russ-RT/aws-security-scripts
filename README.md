@@ -38,8 +38,3 @@ Python scripts using boto3 for AWS security auditing:
 python iam_audit.py           # generates iam_audit.csv
 python cloudtrail_parser.py   # generates cloudtrail_alerts.csv
 ```
-
-```bash
-python iam_audit.py           # generates iam_audit.csv
-python cloudtrail_parser.py   # generates cloudtrail_alerts.csv
-```
